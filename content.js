@@ -12,7 +12,7 @@ window.SITE = {
   field: "Sales, spare parts, customer service",
 
   // Nama perusahaan: ISI SETELAH ADA IZIN ATASAN. Kosongkan ("") untuk menyembunyikan.
-  company: "",
+  company: "PT. Berca Mandiri Perkasa",
 
   whatsapp: "6287889501070",          // format 62..., tanpa + dan tanpa 0 di depan
   linkedin: "https://www.linkedin.com/in/muhamad-rizal-fauzi-982391184/",
