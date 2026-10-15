@@ -15,7 +15,7 @@ window.SITE = {
   company: "",
 
   whatsapp: "6287889501070",          // format 62..., tanpa + dan tanpa 0 di depan
-  linkedin: "https://www.linkedin.com/in/muhamad-rizal-fauzi-982391184/?isSelfProfile=true",
+  linkedin: "https://www.linkedin.com/in/muhamad-rizal-fauzi-982391184/",
   github: "https://github.com/Mrizalfauzi90",
 
   about: [
