@@ -6,7 +6,7 @@
 window.SITE = {
   name: "M. Rizal Fauzi",
   role: "Sales spare parts alat berat dan forklift, yang membuat tools sendiri untuk kerja lapangan.",
-  photo: "images/foto.jpg",            // foto profil, ganti file ini untuk mengganti foto
+  photo: "foto.jpg",            // foto profil, ganti file ini untuk mengganti foto
   photoAlt: "Foto profil M. Rizal Fauzi",
   area: "Cilegon dan Serang, Banten",
   field: "Sales, spare parts, customer service",
@@ -48,7 +48,7 @@ window.SITE = {
       "Pantau quotation dan status penjualan",
       "Sinkron antar perangkat lewat akun GitHub sendiri"
     ],
-    demoUrl: "demo/",   // demo ada di folder demo (data contoh). Kosong = tombol tampil "Segera hadir"
+    demoUrl: "demo.html",   // demo ada di file demo.html (data contoh). Kosong = tombol tampil "Segera hadir"
     repoUrl: ""    // isi link repo publik bila sudah siap dibagikan
   }
 };

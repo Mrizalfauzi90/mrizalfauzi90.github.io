@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracker VCS | Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EEF1F3;--ink:#17222B;--steel:#55646F;--line:#C4CCD2;--card:#fff;--yellow:#F2B705;
+--head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--body:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--paper:#10181E;--ink:#E8EDF0;--steel:#93A2AD;--line:#2B3842;--card:#17222B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.05rem/1.55 var(--body)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 12px,#17222B 12px 24px)}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.1rem 3rem}
+h1{font:700 2.2rem/1 var(--head);margin:1.3rem 0 .3rem}
+h2{font:700 1.5rem var(--head);margin:0 0 .6rem}
+.banner{background:var(--card);border:2px solid var(--ink);border-left:8px solid var(--yellow);padding:.7rem .9rem;margin:.9rem 0 1.2rem;font-size:.95rem}
+.banner button{margin-top:.5rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.3rem}
+.stat{background:var(--card);border:2px solid var(--ink);padding:.7rem .8rem}
+.stat b{display:block;font:700 1.7rem/1.1 var(--head)}
+.stat span{color:var(--steel);font-size:.88rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:1rem}
+.tab,.btn{font:600 1.05rem var(--head);padding:.55rem 1.1rem;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-selected=true],.btn.main{background:var(--yellow);color:#17222B}
+.btn:hover,.tab:hover{background:var(--ink);color:var(--paper)}
+form,.item{background:var(--card);border:2px solid var(--ink);padding:.9rem;margin-bottom:.8rem}
+form{display:grid;gap:.7rem}
+label{display:block;font-weight:500;font-size:.92rem;margin-bottom:.2rem}
+input,select,textarea{width:100%;padding:.55rem .65rem;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:0}
+.item{display:grid;gap:.25rem}
+.item strong{font:700 1.25rem var(--head)}
+.meta{color:var(--steel);font-size:.9rem}
+.pill{display:inline-block;font:600 .95rem var(--head);padding:.05rem .6rem;border:2px solid var(--ink)}
+[hidden]{display:none!important}
+@media (max-width:30rem){.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"></div>
+<div class="wrap">
+  <h1>Tracker VCS</h1>
+  <p class="meta" style="margin:0">Catat visit dan quotation dari HP, tanpa spreadsheet yang berantakan.</p>
+  <div class="banner">Ini <b>versi demo</b> dengan data contoh. Silakan coba tambah, ubah, atau hapus. Semua tersimpan di browsermu saja, tidak dikirim ke mana pun.
+    <br><button class="btn" id="reset" type="button">Reset demo</button></div>
+
+  <div class="stats">
+    <div class="stat"><b id="s-visit">0</b><span>Visit tercatat</span></div>
+    <div class="stat"><b id="s-quote">0</b><span>Quotation berjalan</span></div>
+    <div class="stat"><b id="s-value">Rp 0</b><span>Nilai potensi</span></div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-visit" aria-selected="true">Visit</button>
+    <button class="tab" role="tab" id="t-quote" aria-selected="false">Quotation</button>
+  </div>
+
+  <div id="p-visit">
+    <form id="f-visit">
+      <div><label for="v-c">Nama customer</label><input id="v-c" required placeholder="contoh: PT Contoh Maju"></div>
+      <div><label for="v-p">Tujuan visit</label><select id="v-p"><option>Prospek baru</option><option>Follow-up quotation</option><option>Servis unit</option><option>Antar part</option></select></div>
+      <div><label for="v-n">Catatan</label><textarea id="v-n" rows="2" placeholder="hasil kunjungan"></textarea></div>
+      <button class="btn main" type="submit">Simpan visit</button>
+    </form>
+    <div id="l-visit"></div>
+  </div>
+
+  <div id="p-quote" hidden>
+    <form id="f-quote">
+      <div><label for="q-c">Nama customer</label><input id="q-c" required placeholder="contoh: PT Contoh Maju"></div>
+      <div><label for="q-b">Merek</label><select id="q-b"><option>Mitsubishi</option><option>Nichiyu</option><option>BYD</option><option>Noblelift</option><option>Lonking</option></select></div>
+      <div><label for="q-v">Nilai penawaran (Rp)</label><input id="q-v" type="number" min="0" step="1000" required placeholder="contoh: 5000000"></div>
+      <button class="btn main" type="submit">Simpan quotation</button>
+    </form>
+    <div id="l-quote"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY="vcs-demo-v1", STATUS=["Draft","Terkirim","Negosiasi","Deal","Batal"];
+  var seed=function(){return {
+    visits:[
+      {c:"PT Contoh Baja Utama",p:"Prospek baru",n:"Tanya filter forklift diesel, minta penawaran.",d:"2026-10-12"},
+      {c:"CV Maju Gudang Sejahtera",p:"Follow-up quotation",n:"Menunggu persetujuan pembelian.",d:"2026-10-09"},
+      {c:"PT Contoh Logistik Nusantara",p:"Servis unit",n:"Rem unit elektrik bermasalah, koordinasi dengan mekanik.",d:"2026-10-07"}],
+    quotes:[
+      {c:"PT Contoh Baja Utama",b:"Mitsubishi",v:12500000,s:"Terkirim"},
+      {c:"CV Maju Gudang Sejahtera",b:"Nichiyu",v:8300000,s:"Negosiasi"},
+      {c:"PT Contoh Logistik Nusantara",b:"Lonking",v:21000000,s:"Draft"}]}};
+  var D;
+  try{D=JSON.parse(localStorage.getItem(KEY))}catch(e){D=null}
+  if(!D||!D.visits||!D.quotes)D=seed();
+  var save=function(){try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}};
+  var $=function(i){return document.getElementById(i)};
+  var rp=function(n){return "Rp "+Number(n).toLocaleString("id-ID")};
+  var el=function(t,x,c){var e=document.createElement(t);if(x!==undefined)e.textContent=x;if(c)e.className=c;return e};
+
+  function render(){
+    var act=D.quotes.filter(function(q){return q.s!=="Deal"&&q.s!=="Batal"});
+    $("s-visit").textContent=D.visits.length;
+    $("s-quote").textContent=act.length;
+    $("s-value").textContent=rp(act.reduce(function(a,q){return a+q.v},0));
+
+    var lv=$("l-visit");lv.textContent="";
+    D.visits.forEach(function(v,i){
+      var it=el("div",undefined,"item");
+      it.appendChild(el("strong",v.c));
+      it.appendChild(el("span",v.p+" | "+v.d,"meta"));
+      if(v.n)it.appendChild(el("span",v.n));
+      var b=el("button","Hapus","btn");b.type="button";b.style.justifySelf="start";
+      b.onclick=function(){D.visits.splice(i,1);save();render()};
+      it.appendChild(b);lv.appendChild(it);
+    });
+
+    var lq=$("l-quote");lq.textContent="";
+    D.quotes.forEach(function(q,i){
+      var it=el("div",undefined,"item");
+      it.appendChild(el("strong",q.c));
+      it.appendChild(el("span",q.b+" | "+rp(q.v),"meta"));
+      var s=el("select");STATUS.forEach(function(x){var o=el("option",x);if(x===q.s)o.selected=true;s.appendChild(o)});
+      s.setAttribute("aria-label","Status "+q.c);
+      s.onchange=function(){q.s=s.value;save();render()};
+      it.appendChild(s);
+      var b=el("button","Hapus","btn");b.type="button";b.style.justifySelf="start";
+      b.onclick=function(){D.quotes.splice(i,1);save();render()};
+      it.appendChild(b);lq.appendChild(it);
+    });
+  }
+
+  $("f-visit").onsubmit=function(e){e.preventDefault();
+    D.visits.unshift({c:$("v-c").value.trim(),p:$("v-p").value,n:$("v-n").value.trim(),d:new Date().toISOString().slice(0,10)});
+    save();this.reset();render()};
+  $("f-quote").onsubmit=function(e){e.preventDefault();
+    D.quotes.unshift({c:$("q-c").value.trim(),b:$("q-b").value,v:Number($("q-v").value),s:"Draft"});
+    save();this.reset();render()};
+  $("reset").onclick=function(){D=seed();save();render()};
+
+  function tab(w){
+    $("p-visit").hidden=w!=="visit";$("p-quote").hidden=w!=="quote";
+    $("t-visit").setAttribute("aria-selected",w==="visit");$("t-quote").setAttribute("aria-selected",w==="quote");
+  }
+  $("t-visit").onclick=function(){tab("visit")};
+  $("t-quote").onclick=function(){tab("quote")};
+  render();
+})();
+</script>
+</body>
+</html>
