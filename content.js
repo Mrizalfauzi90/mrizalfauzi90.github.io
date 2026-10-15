@@ -14,8 +14,8 @@ window.SITE = {
   // Nama perusahaan: ISI SETELAH ADA IZIN ATASAN. Kosongkan ("") untuk menyembunyikan.
   company: "",
 
-  whatsapp: "62XXXXXXXXXX",          // format 62..., tanpa + dan tanpa 0 di depan
-  linkedin: "https://www.linkedin.com/in/NAMA-KAMU",
+  whatsapp: "6287889501070",          // format 62..., tanpa + dan tanpa 0 di depan
+  linkedin: "https://www.linkedin.com/in/muhamad-rizal-fauzi-982391184/?isSelfProfile=true",
   github: "https://github.com/Mrizalfauzi90",
 
   about: [
