@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M. Rizal Fauzi | Sales Spare Parts dan Pembuat Tools Lapangan</title>
+<meta name="description" content="Sales spare parts forklift dan alat berat di Cilegon dan Serang, sekaligus pembuat tools web untuk kerja lapangan.">
+<meta property="og:title" content="M. Rizal Fauzi | Sales Spare Parts dan Pembuat Tools Lapangan">
+<meta property="og:description" content="Part forklift dan alat berat di Cilegon-Serang. Minta penawaran lewat WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F3; --ink:#17222B; --steel:#55646F; --line:#C4CCD2; --card:#FFFFFF; --yellow:#F2B705; --on-yellow:#17222B;
+  --head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#10181E;--ink:#E8EDF0;--steel:#93A2AD;--line:#2B3842;--card:#17222B}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:58rem;margin:0 auto;padding:0 1.25rem}
+.text{max-width:42rem}
+p{margin:0 0 1rem}
+
+header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
+.brand{font:700 1.3rem var(--head);text-decoration:none}
+nav a{margin-left:1.1rem;text-decoration:none;color:var(--steel);font-weight:500}
+nav a:hover{color:var(--ink);text-decoration:underline}
+
+.hero{padding:2.75rem 0 2.5rem}
+.plate{background:var(--card);border:2px solid var(--ink);max-width:44rem}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 14px,#17222B 14px 28px)}
+.plate-in{padding:1.5rem 1.5rem 1.4rem}
+.plate h1{font:700 clamp(2.5rem,10vw,4.2rem)/.98 var(--head);margin:0 0 .5rem}
+.plate .role{font:600 1.4rem/1.25 var(--head);margin:0 0 1.25rem}
+.plate dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.25rem;margin:0;border-top:1px solid var(--line);padding-top:1rem}
+.plate dt{color:var(--steel)}
+.plate dd{margin:0;font-weight:500}
+.photo{display:block;width:100%;max-width:12rem;aspect-ratio:1;object-fit:cover;border:2px solid var(--ink);margin-bottom:1.1rem}
+@media (min-width:40rem){
+  .plate-in{display:grid;grid-template-columns:1fr 12rem;column-gap:1.75rem;align-items:start}
+  .plate-in>*{grid-column:1}
+  .plate-in>.photo{grid-column:2;grid-row:1 / span 5;margin:0;max-width:none}
+}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.4rem}
+.btn{display:inline-block;padding:.7rem 1.25rem;font:600 1.1rem var(--head);text-decoration:none;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.btn.main{background:var(--yellow);color:var(--on-yellow);border-color:var(--ink)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn[aria-disabled=true]{opacity:.55;pointer-events:none}
+
+section{padding:2.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 2rem/1.1 var(--head);margin:0 0 1rem}
+.work{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
+.work li{border-left:4px solid var(--ink);padding-left:1rem}
+.work strong{display:block;font:600 1.3rem var(--head)}
+.brands{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.8rem}
+.brands li{background:var(--card);border:2px solid var(--ink);border-left:8px solid var(--yellow);padding:.8rem 1rem;font-size:.98rem;line-height:1.5}
+.brands strong{display:block;font:700 1.4rem/1.2 var(--head)}
+.note{color:var(--steel);font-size:.95rem}
+
+form.quote{background:var(--card);border:2px solid var(--ink);padding:1.25rem;max-width:44rem;margin-top:1.5rem}
+form.quote h3{font:700 1.5rem var(--head);margin:0 0 .25rem}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin:1rem 0}
+label{display:block;font-weight:500;font-size:.95rem;margin-bottom:.25rem}
+select,input{width:100%;padding:.6rem .7rem;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:0}
+
+.proj{background:var(--card);border:2px solid var(--ink);padding:0;max-width:44rem}
+.proj .inner{padding:1.25rem}
+.proj h3{font:700 1.6rem var(--head);margin:0 0 .5rem}
+.proj ul{margin:0 0 1.1rem;padding-left:1.2rem}
+
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);font-size:.95rem}
+@media (max-width:32rem){
+  nav a{margin:0 1rem 0 0}
+  .plate dl{grid-template-columns:1fr;gap:0}
+  .plate dd{margin-bottom:.6rem}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#atas" id="brand"></a>
+  <nav aria-label="Navigasi"><a href="#tentang">Tentang</a><a href="#part">Part</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a></nav>
+</div></header>
+
+<main id="atas"><div class="wrap">
+  <div class="hero"><div class="plate">
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="plate-in">
+      <img class="photo" id="h-photo" alt="" width="640" height="640" hidden>
+      <h1 id="h-name"></h1>
+      <p class="role" id="h-role"></p>
+      <dl>
+        <dt>Wilayah</dt><dd id="h-area"></dd>
+        <dt>Bidang</dt><dd id="h-field"></dd>
+        <dt>Sedang dibangun</dt><dd id="h-build"></dd>
+      </dl>
+      <div class="cta"><a class="btn main" href="#part">Lihat part</a><a class="btn" href="#proyek">Lihat proyek</a></div>
+    </div>
+  </div></div>
+
+  <section id="tentang"><h2>Tentang saya</h2><div class="text" id="about"></div>
+    <ul class="work" id="work" style="margin-top:1.5rem"></ul></section>
+
+  <section id="part"><h2>Part untuk forklift dan alat berat</h2>
+    <p class="text">Kirim merek, tipe unit, dan nomor seri atau nomor part. Saya cek ketersediaan lalu kirim penawaran. Harga dan stok dikonfirmasi lewat penawaran resmi.</p>
+    <ul class="brands" id="brands"></ul>
+    <p class="note" id="other"></p>
+    <p class="note" id="via"></p>
+    <form class="quote" id="quote">
+      <h3>Minta penawaran part</h3>
+      <p class="note" style="margin:0">Isi singkat, lalu lanjut di WhatsApp.</p>
+      <div class="row">
+        <div><label for="q-brand">Merek</label><select id="q-brand"></select></div>
+        <div><label for="q-unit">Tipe unit</label><input id="q-unit" placeholder="contoh: FD25 / CDM307"></div>
+        <div><label for="q-part">No. seri atau no. part</label><input id="q-part" placeholder="kalau ada"></div>
+      </div>
+      <button class="btn main" type="submit">Kirim lewat WhatsApp</button>
+    </form>
+  </section>
+
+  <section id="proyek"><h2>Proyek</h2>
+    <div class="proj"><div class="stripe" aria-hidden="true"></div><div class="inner">
+      <h3 id="p-title"></h3><p id="p-text"></p><ul id="p-feat"></ul>
+      <div class="cta" style="margin-top:0"><a class="btn main" id="p-demo" href="#">Coba demo</a><a class="btn" id="p-repo" href="#" hidden>Lihat kode</a></div>
+    </div></div>
+  </section>
+
+  <section id="kontak"><h2>Kontak</h2>
+    <p class="text">Mau tanya part, atau belajar membuat tools sendiri? Hubungi saya.</p>
+    <div class="cta" style="margin-top:0"><a class="btn main" id="c-wa" href="#">WhatsApp</a><a class="btn" id="c-li" href="#">LinkedIn</a><a class="btn" id="c-gh" href="#">GitHub</a></div>
+  </section>
+</div></main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+<noscript><div class="wrap"><p>Halaman ini membutuhkan JavaScript untuk menampilkan isinya.</p></div></noscript>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  var S = window.SITE || {};
+  var $ = function(id){return document.getElementById(id)};
+  var el = function(tag, txt, cls){var e=document.createElement(tag); if(txt) e.textContent=txt; if(cls) e.className=cls; return e};
+  var wa = function(msg){return "https://wa.me/"+S.whatsapp+(msg?"?text="+encodeURIComponent(msg):"")};
+
+  document.title = S.name+" | Sales Spare Parts dan Pembuat Tools Lapangan";
+  $("brand").textContent = S.name; $("h-name").textContent = S.name; $("h-role").textContent = S.role;
+  if(S.photo){var ph=$("h-photo"); ph.src=S.photo; ph.alt=S.photoAlt||("Foto "+S.name); ph.hidden=false}
+  $("h-area").textContent = S.area; $("h-field").textContent = S.field;
+  $("h-build").textContent = (S.project&&S.project.title ? S.project.title+", pencatat visit dan quotation berbasis web" : "");
+
+  (S.about||[]).forEach(function(t){$("about").appendChild(el("p",t))});
+  (S.work||[]).forEach(function(w){var li=el("li"); li.appendChild(el("strong",w.title)); li.appendChild(document.createTextNode(w.text)); $("work").appendChild(li)});
+
+  var sel = $("q-brand");
+  (S.brands||[]).forEach(function(b){
+    var li=el("li"); li.appendChild(el("strong",b.name)); li.appendChild(document.createTextNode(b.text)); $("brands").appendChild(li);
+    var o=el("option",b.name); o.value=b.name; sel.appendChild(o);
+  });
+  var oo=el("option","Merek lain"); oo.value="Merek lain"; sel.appendChild(oo);
+  $("other").textContent = S.otherBrands||"";
+  $("via").textContent = S.company ? "Penawaran dan pengiriman melalui "+S.company+"." : "";
+  if(!S.company) $("via").hidden = true;
+
+  $("quote").addEventListener("submit", function(e){
+    e.preventDefault();
+    var lines = ["Halo Pak Rizal, saya mau tanya part.","Merek: "+sel.value];
+    if($("q-unit").value.trim()) lines.push("Tipe unit: "+$("q-unit").value.trim());
+    if($("q-part").value.trim()) lines.push("No. seri/part: "+$("q-part").value.trim());
+    window.open(wa(lines.join("\n")), "_blank", "noopener");
+  });
+
+  var p = S.project||{};
+  $("p-title").textContent = p.title||""; $("p-text").textContent = p.text||"";
+  (p.features||[]).forEach(function(f){$("p-feat").appendChild(el("li",f))});
+  var demo=$("p-demo");
+  if(p.demoUrl){demo.href=p.demoUrl; demo.target="_blank"; demo.rel="noopener"}
+  else{demo.textContent="Demo segera hadir"; demo.setAttribute("aria-disabled","true"); demo.removeAttribute("href")}
+  if(p.repoUrl){var r=$("p-repo"); r.href=p.repoUrl; r.target="_blank"; r.rel="noopener"; r.hidden=false}
+
+  $("c-wa").href = wa(""); $("c-li").href = S.linkedin; $("c-gh").href = S.github;
+  [$("c-wa"),$("c-li"),$("c-gh")].forEach(function(a){a.target="_blank"; a.rel="noopener"});
+  $("foot").textContent = S.name+", Cilegon."+(S.company ? " "+S.company+"." : "");
+})();
+</script>
+</body>
+</html>
