@@ -3,193 +3,268 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M. Rizal Fauzi | Sales Spare Parts dan Pembuat Tools Lapangan</title>
-<meta name="description" content="Sales spare parts forklift dan alat berat di Cilegon dan Serang, sekaligus pembuat tools web untuk kerja lapangan.">
-<meta property="og:title" content="M. Rizal Fauzi | Sales Spare Parts dan Pembuat Tools Lapangan">
-<meta property="og:description" content="Part forklift dan alat berat di Cilegon-Serang. Minta penawaran lewat WhatsApp.">
+<title>M. Rizal Fauzi | Customer Service Officer, Material Handling dan Alat Berat</title>
+<meta name="description" content="Portofolio pribadi M. Rizal Fauzi, Customer Service Officer di bidang material handling dan alat berat: spare parts, layanan purna jual, dan tools digital.">
+<meta property="og:title" content="M. Rizal Fauzi | Portofolio Pribadi">
+<meta property="og:description" content="Customer service, spare parts, dan tools digital untuk industri material handling.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#EEF1F3; --ink:#17222B; --steel:#55646F; --line:#C4CCD2; --card:#FFFFFF; --yellow:#F2B705; --on-yellow:#17222B;
-  --head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
-  --body:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--paper:#10181E;--ink:#E8EDF0;--steel:#93A2AD;--line:#2B3842;--card:#17222B}
-}
+:root{--charcoal:#171A1D;--graphite:#24282C;--orange:#ED7D31;--warm:#F7F5F0;--white:#fff;--muted:#8B9299;--border:#E3E0DA;
+--font:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--pad:clamp(1.25rem,5vw,4rem);--max:72rem;--ease:.35s ease}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+body{margin:0;font:400 1.0625rem/1.65 var(--font);background:var(--warm);color:var(--charcoal)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.rv{opacity:1!important;transform:none!important}}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.wrap{max-width:58rem;margin:0 auto;padding:0 1.25rem}
-.text{max-width:42rem}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.label{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 .9rem}
+h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;margin-bottom:1rem}
 p{margin:0 0 1rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;font:700 .98rem var(--font);text-decoration:none;border:2px solid var(--orange);background:var(--orange);color:var(--charcoal);cursor:pointer;transition:var(--ease)}
+.btn:hover{background:transparent;color:var(--orange)}
+.btn.ghost{background:transparent;border-color:#5B6168;color:var(--white)}
+.btn.ghost:hover{border-color:var(--orange);color:var(--orange)}
+.btn.dark{background:var(--charcoal);border-color:var(--charcoal);color:var(--white)}
+.btn.dark:hover{background:transparent;color:var(--charcoal)}
+.btn[aria-disabled=true]{opacity:.5;pointer-events:none}
+.row{display:flex;flex-wrap:wrap;gap:.8rem}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
 
-header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
-.brand{font:700 1.3rem var(--head);text-decoration:none}
-nav a{margin-left:1.1rem;text-decoration:none;color:var(--steel);font-weight:500}
-nav a:hover{color:var(--ink);text-decoration:underline}
-
-.hero{padding:2.75rem 0 2.5rem}
-.plate{background:var(--card);border:2px solid var(--ink);max-width:44rem}
-.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 14px,#17222B 14px 28px)}
-.plate-in{padding:1.5rem 1.5rem 1.4rem}
-.plate h1{font:700 clamp(2.5rem,10vw,4.2rem)/.98 var(--head);margin:0 0 .5rem}
-.plate .role{font:600 1.4rem/1.25 var(--head);margin:0 0 1.25rem}
-.plate dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.25rem;margin:0;border-top:1px solid var(--line);padding-top:1rem}
-.plate dt{color:var(--steel)}
-.plate dd{margin:0;font-weight:500}
-.photo{display:block;width:100%;height:auto;max-width:12rem;aspect-ratio:1;object-fit:cover;border:2px solid var(--ink);margin-bottom:1.1rem}
-@media (min-width:40rem){
-  .plate-in{display:grid;grid-template-columns:1fr 12rem;column-gap:1.75rem;align-items:start}
-  .plate-in>*{grid-column:1}
-  .plate-in>.photo{grid-column:2;grid-row:1 / span 5;margin:0;max-width:none}
+header.site{position:fixed;top:0;left:0;right:0;z-index:20;color:var(--white);transition:background var(--ease)}
+header.site.solid{background:rgba(23,26,29,.96)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:4.25rem}
+.brand{text-decoration:none;line-height:1.15}
+.brand b{display:block;font-weight:800;letter-spacing:.08em}
+.brand small{font-size:.62rem;letter-spacing:.2em;color:var(--muted)}
+nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:.9rem;font-weight:500;color:#D5D8DB;transition:color var(--ease)}
+nav a:hover,nav a[aria-current=true]{color:var(--orange)}
+.menu{display:none;background:none;border:2px solid #5B6168;color:var(--white);padding:.45rem .8rem;font:700 .85rem var(--font);cursor:pointer}
+@media (max-width:52rem){
+  .menu{display:block}
+  nav ul{display:none;position:absolute;top:4.25rem;left:0;right:0;flex-direction:column;gap:0;background:var(--charcoal);padding:.5rem var(--pad) 1rem}
+  nav ul.open{display:flex}
+  nav li a{display:block;padding:.85rem 0;border-bottom:1px solid var(--graphite)}
 }
-.cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.4rem}
-.btn{display:inline-block;padding:.7rem 1.25rem;font:600 1.1rem var(--head);text-decoration:none;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
-.btn.main{background:var(--yellow);color:var(--on-yellow);border-color:var(--ink)}
-.btn:hover{background:var(--ink);color:var(--paper)}
-.btn[aria-disabled=true]{opacity:.55;pointer-events:none}
 
-section{padding:2.5rem 0;border-top:1px solid var(--line)}
-h2{font:700 2rem/1.1 var(--head);margin:0 0 1rem}
-.work{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
-.work li{border-left:4px solid var(--ink);padding-left:1rem}
-.work strong{display:block;font:600 1.3rem var(--head)}
-.brands{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.8rem}
-.brands li{background:var(--card);border:2px solid var(--ink);border-left:8px solid var(--yellow);padding:.8rem 1rem;font-size:.98rem;line-height:1.5}
-.brands strong{display:block;font:700 1.4rem/1.2 var(--head)}
-.note{color:var(--steel);font-size:.95rem}
+.hero{position:relative;overflow:hidden;background:var(--charcoal);color:var(--white);min-height:100svh;display:flex;align-items:center;padding:6.5rem 0 4rem}
+.hero::before{content:"";position:absolute;right:-12rem;top:-10rem;width:36rem;height:36rem;border:2px solid var(--graphite);border-radius:50%}
+.hero .wrap{position:relative;display:grid;gap:3rem;align-items:center}
+@media (min-width:56rem){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.hero h1{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:800;margin-bottom:1.4rem}
+.hero p.lead{color:#C4C8CC;max-width:36rem;margin-bottom:2rem}
+.loc{margin-top:1.6rem;font-size:.85rem;color:var(--muted)}
+.frame{position:relative;max-width:26rem;width:100%;justify-self:center}
+.frame::before{content:"";position:absolute;inset:1.1rem -1.1rem -1.1rem 1.1rem;background:var(--orange)}
+.frame img{position:relative;display:block;width:100%;aspect-ratio:1;object-fit:cover;filter:saturate(.95)}
+.frame::after{content:"";position:absolute;left:-1.6rem;bottom:2.5rem;width:3.2rem;height:3.2rem;border:2px solid var(--white);border-radius:50%}
 
-form.quote{background:var(--card);border:2px solid var(--ink);padding:1.25rem;max-width:44rem;margin-top:1.5rem}
-form.quote h3{font:700 1.5rem var(--head);margin:0 0 .25rem}
-.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin:1rem 0}
-label{display:block;font-weight:500;font-size:.95rem;margin-bottom:.25rem}
-select,input{width:100%;padding:.6rem .7rem;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:0}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.about .wrap{display:grid;gap:2rem}
+@media (min-width:56rem){.about .wrap{grid-template-columns:1fr 1.1fr;gap:4rem}}
+.about p{color:#4A5056}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--border);padding:1.5rem;transition:var(--ease)}
+.card:hover{border-top-color:var(--orange);transform:translateY(-3px)}
+.card .n{font-size:.76rem;font-weight:700;letter-spacing:.14em;color:var(--orange)}
+.card h3{font-size:1.2rem;font-weight:700;margin:.6rem 0 .6rem}
+.card p{color:#5A6168;font-size:.97rem;margin:0}
 
-.proj{background:var(--card);border:2px solid var(--ink);padding:0;max-width:44rem}
-.proj .inner{padding:1.25rem}
-.proj h3{font:700 1.6rem var(--head);margin:0 0 .5rem}
-.proj ul{margin:0 0 1.1rem;padding-left:1.2rem}
+.showcase{background:#FEFEFE;border-bottom:1px solid var(--border);text-align:center}
+.showcase h2::after{content:"";display:block;width:3rem;height:3px;background:var(--orange);margin:1rem auto 0}
+.banner{margin:2rem 0 0}
+.banner img{display:block;width:100%;max-width:2000px;height:auto;margin:0 auto}
+.banner figcaption{margin:1.4rem auto 0;max-width:46rem;font-size:.85rem;color:#6B7178}
+.parts{background:var(--graphite);color:var(--white)}
+.parts .sub{color:#C4C8CC;max-width:40rem}
+.brands{list-style:none;margin:2rem 0 1rem;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.brands li{border:1px solid #3A4046;border-left:4px solid var(--orange);padding:1.1rem 1.2rem;font-size:.95rem;color:#C4C8CC}
+.brands strong{display:block;color:var(--white);font-size:1.15rem;margin-bottom:.3rem}
+.note{font-size:.9rem;color:var(--muted)}
+form.quote{background:var(--white);color:var(--charcoal);padding:1.6rem;margin-top:2rem;max-width:46rem}
+form.quote h3{font-size:1.35rem;margin-bottom:1rem}
+.fields{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));margin-bottom:1.2rem}
+label{display:block;font-size:.85rem;font-weight:700;margin-bottom:.3rem}
+select,input{width:100%;padding:.7rem .8rem;font:inherit;border:1px solid #CFCBC3;background:var(--warm);color:var(--charcoal);border-radius:0}
 
-footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);font-size:.95rem}
-@media (max-width:32rem){
-  nav a{margin:0 1rem 0 0}
-  .plate dl{grid-template-columns:1fr;gap:0}
-  .plate dd{margin-bottom:.6rem}
-}
+.proj{display:grid;gap:1.5rem;background:var(--white);border:1px solid var(--border);border-left:5px solid var(--orange);padding:clamp(1.4rem,4vw,2.4rem);max-width:52rem}
+.proj h3{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 1.3rem;padding:0;list-style:none}
+.tags li{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border);padding:.25rem .6rem;color:#5A6168}
+
+.principles{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0}
+.principles .grid{gap:0;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.pr{padding:2.2rem 1.5rem;border-left:1px solid var(--border)}
+.pr:first-child{border-left:0}
+.pr .n{font-size:2rem;font-weight:800;color:var(--orange)}
+.pr h3{font-size:1.1rem;margin:.4rem 0}
+.pr p{color:#5A6168;margin:0;font-size:.97rem}
+@media (max-width:48rem){.pr{border-left:0;border-top:1px solid var(--border)}.pr:first-child{border-top:0}}
+
+.contact{background:var(--charcoal);color:var(--white)}
+.contact h2{font-size:clamp(2.2rem,6vw,4rem)}
+.contact p{color:#C4C8CC;max-width:36rem;margin-bottom:2rem}
+footer{background:#0F1113;color:var(--muted);padding:2.2rem 0;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+footer b{color:var(--white)}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand" href="#atas" id="brand"></a>
-  <nav aria-label="Navigasi"><a href="#tentang">Tentang</a><a href="#part">Part</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a></nav>
+<header class="site" id="hdr"><div class="wrap">
+  <a class="brand" href="#atas"><b>RIZAL FAUZI</b><small>PORTOFOLIO PRIBADI</small></a>
+  <nav aria-label="Navigasi utama">
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <ul id="nav-list">
+      <li><a href="#atas">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#part">Part</a></li><li><a href="#proyek">Proyek</a></li><li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
 </div></header>
 
-<main id="atas"><div class="wrap">
-  <div class="hero"><div class="plate">
-    <div class="stripe" aria-hidden="true"></div>
-    <div class="plate-in">
-      <img class="photo" id="h-photo" alt="" width="640" height="640" hidden>
-      <h1 id="h-name"></h1>
-      <p class="role" id="h-role"></p>
-      <dl>
-        <dt>Wilayah</dt><dd id="h-area"></dd>
-        <dt>Bidang</dt><dd id="h-field"></dd>
-        <dt>Sedang dibangun</dt><dd id="h-build"></dd>
-      </dl>
-      <div class="cta"><a class="btn main" href="#part">Lihat part</a><a class="btn" href="#proyek">Lihat proyek</a></div>
+<main>
+<section class="hero" id="atas"><div class="wrap">
+  <div>
+    <p class="label" id="eyebrow"></p>
+    <h1 id="headline"></h1>
+    <p class="lead" id="intro"></p>
+    <div class="row"><a class="btn" href="#kontak">Hubungi Saya</a><a class="btn ghost" href="#proyek">Lihat Karya Saya</a></div>
+    <p class="loc" id="loc"></p>
+  </div>
+  <div class="frame"><img id="photo" alt="" width="640" height="640" hidden></div>
+</div></section>
+
+<section class="showcase" id="merek" hidden><div class="wrap">
+  <p class="label rv">Material Handling</p>
+  <h2 class="rv" id="b-title"></h2>
+  <figure class="banner rv"><img id="b-img" alt="" width="2000" height="667" loading="lazy" decoding="async"><figcaption id="b-note"></figcaption></figure>
+</div></section>
+
+<section class="about" id="tentang"><div class="wrap">
+  <div class="rv"><p class="label">Tentang Saya</p><h2 id="about-t"></h2></div>
+  <div class="rv" id="about"></div>
+</div></section>
+
+<section id="keahlian" style="padding-top:0"><div class="wrap">
+  <p class="label rv">Keahlian dan Fokus Profesional</p>
+  <h2 class="rv">Yang Saya Kerjakan</h2>
+  <div class="grid" id="expertise"></div>
+</div></section>
+
+<section class="parts" id="part"><div class="wrap">
+  <p class="label rv">Spare Parts</p>
+  <h2 class="rv">Part untuk Forklift dan Alat Berat</h2>
+  <p class="sub rv" id="parts-intro"></p>
+  <ul class="brands" id="brands"></ul>
+  <p class="note" id="other"></p>
+  <p class="note" id="via"></p>
+  <form class="quote rv" id="quote">
+    <h3>Minta Penawaran Part</h3>
+    <div class="fields">
+      <div><label for="q-brand">Merek</label><select id="q-brand"></select></div>
+      <div><label for="q-unit">Tipe unit</label><input id="q-unit" placeholder="contoh: FD25 / CDM307"></div>
+      <div><label for="q-part">No. seri atau no. part</label><input id="q-part" placeholder="kalau ada"></div>
     </div>
+    <button class="btn dark" type="submit">Kirim lewat WhatsApp</button>
+  </form>
+</div></section>
+
+<section id="proyek"><div class="wrap">
+  <p class="label rv">Proyek Pilihan</p>
+  <h2 class="rv">Tools yang Saya Bangun</h2>
+  <div class="proj rv"><div>
+    <p class="label" id="p-cat"></p><h3 id="p-title"></h3>
+    <p id="p-text" style="margin-top:.8rem;color:#4A5056"></p>
+    <ul class="tags" id="p-tags"></ul>
+    <div class="row"><a class="btn dark" id="p-demo" href="#">Buka Demo</a><a class="btn" id="p-repo" href="#" hidden>Lihat Kode</a></div>
   </div></div>
+</div></section>
 
-  <section id="tentang"><h2>Tentang saya</h2><div class="text" id="about"></div>
-    <ul class="work" id="work" style="margin-top:1.5rem"></ul></section>
+<section class="principles"><div class="wrap"><div class="grid" id="principles"></div></div></section>
 
-  <section id="part"><h2>Part untuk forklift dan alat berat</h2>
-    <p class="text">Kirim merek, tipe unit, dan nomor seri atau nomor part. Saya cek ketersediaan lalu kirim penawaran. Harga dan stok dikonfirmasi lewat penawaran resmi.</p>
-    <ul class="brands" id="brands"></ul>
-    <p class="note" id="other"></p>
-    <p class="note" id="via"></p>
-    <form class="quote" id="quote">
-      <h3>Minta penawaran part</h3>
-      <p class="note" style="margin:0">Isi singkat, lalu lanjut di WhatsApp.</p>
-      <div class="row">
-        <div><label for="q-brand">Merek</label><select id="q-brand"></select></div>
-        <div><label for="q-unit">Tipe unit</label><input id="q-unit" placeholder="contoh: FD25 / CDM307"></div>
-        <div><label for="q-part">No. seri atau no. part</label><input id="q-part" placeholder="kalau ada"></div>
-      </div>
-      <button class="btn main" type="submit">Kirim lewat WhatsApp</button>
-    </form>
-  </section>
+<section class="contact" id="kontak"><div class="wrap">
+  <p class="label rv">Kontak</p>
+  <h2 class="rv" id="c-title"></h2>
+  <p class="rv" id="c-text"></p>
+  <div class="row rv" id="c-links"></div>
+</div></section>
+</main>
 
-  <section id="proyek"><h2>Proyek</h2>
-    <div class="proj"><div class="stripe" aria-hidden="true"></div><div class="inner">
-      <h3 id="p-title"></h3><p id="p-text"></p><ul id="p-feat"></ul>
-      <div class="cta" style="margin-top:0"><a class="btn main" id="p-demo" href="#">Coba demo</a><a class="btn" id="p-repo" href="#" hidden>Lihat kode</a></div>
-    </div></div>
-  </section>
-
-  <section id="kontak"><h2>Kontak</h2>
-    <p class="text">Mau tanya part, atau belajar membuat tools sendiri? Hubungi saya.</p>
-    <div class="cta" style="margin-top:0"><a class="btn main" id="c-wa" href="#">WhatsApp</a><a class="btn" id="c-li" href="#">LinkedIn</a><a class="btn" id="c-gh" href="#">GitHub</a></div>
-  </section>
-</div></main>
-
-<footer><div class="wrap" id="foot"></div></footer>
+<footer><div class="wrap">
+  <div><b id="f-name"></b> | Portofolio Pribadi<br>Situs ini portofolio pribadi, bukan situs resmi <span id="f-co"></span>. <span id="yr"></span></div>
+  <ul><li><a href="#tentang">Tentang</a></li><li><a href="#part">Part</a></li><li><a href="#proyek">Proyek</a></li><li><a href="#kontak">Kontak</a></li><li id="f-site" hidden><a href="#" target="_blank" rel="noopener">Situs perusahaan</a></li></ul>
+</div></footer>
 <noscript><div class="wrap"><p>Halaman ini membutuhkan JavaScript untuk menampilkan isinya.</p></div></noscript>
 
 <script src="content.js"></script>
 <script>
 (function(){
-  var S = window.SITE || {};
-  var $ = function(id){return document.getElementById(id)};
-  var el = function(tag, txt, cls){var e=document.createElement(tag); if(txt) e.textContent=txt; if(cls) e.className=cls; return e};
-  var wa = function(msg){return "https://wa.me/"+S.whatsapp+(msg?"?text="+encodeURIComponent(msg):"")};
+  var S=window.SITE||{}, $=function(i){return document.getElementById(i)};
+  var el=function(t,x,c){var e=document.createElement(t);if(x!==undefined)e.textContent=x;if(c)e.className=c;return e};
+  var wa=function(m){return "https://wa.me/"+S.whatsapp+(m?"?text="+encodeURIComponent(m):"")};
+  var rv=function(e){e.classList.add("rv");return e};
 
-  document.title = S.name+" | Sales Spare Parts dan Pembuat Tools Lapangan";
-  $("brand").textContent = S.name; $("h-name").textContent = S.name; $("h-role").textContent = S.role;
-  if(S.photo){var ph=$("h-photo"); ph.src=S.photo; ph.alt=S.photoAlt||("Foto "+S.name); ph.hidden=false}
-  $("h-area").textContent = S.area; $("h-field").textContent = S.field;
-  $("h-build").textContent = (S.project&&S.project.title ? S.project.title+", pencatat visit dan quotation berbasis web" : "");
+  $("eyebrow").textContent=S.eyebrow||""; $("headline").textContent=S.headline||""; $("intro").textContent=S.intro||"";
+  $("loc").textContent=S.location||""; $("about-t").textContent=S.aboutTitle||"";
+  $("f-name").textContent=S.name||""; $("f-co").textContent=S.company||"perusahaan";
+  $("yr").textContent="\u00A9 "+new Date().getFullYear();
+  if(S.photo){var ph=$("photo");ph.src=S.photo;ph.alt=S.photoAlt||("Foto "+S.name);ph.hidden=false}
 
+  if(S.banner){var bi=$("b-img");bi.src=S.banner;bi.alt=S.bannerAlt||"";$("b-title").textContent=S.bannerTitle||"";$("b-note").textContent=S.bannerNote||"";$("merek").hidden=false}
   (S.about||[]).forEach(function(t){$("about").appendChild(el("p",t))});
-  (S.work||[]).forEach(function(w){var li=el("li"); li.appendChild(el("strong",w.title)); li.appendChild(document.createTextNode(w.text)); $("work").appendChild(li)});
+  (S.expertise||[]).forEach(function(x,i){var c=rv(el("div",undefined,"card"));
+    c.appendChild(el("span","0"+(i+1),"n"));c.appendChild(el("h3",x.title));c.appendChild(el("p",x.text));$("expertise").appendChild(c)});
 
-  var sel = $("q-brand");
-  (S.brands||[]).forEach(function(b){
-    var li=el("li"); li.appendChild(el("strong",b.name)); li.appendChild(document.createTextNode(b.text)); $("brands").appendChild(li);
-    var o=el("option",b.name); o.value=b.name; sel.appendChild(o);
-  });
-  var oo=el("option","Merek lain"); oo.value="Merek lain"; sel.appendChild(oo);
-  $("other").textContent = S.otherBrands||"";
-  $("via").textContent = S.company ? "Penawaran dan pengiriman melalui "+S.company+"." : "";
-  if(!S.company) $("via").hidden = true;
+  $("parts-intro").textContent=S.partsIntro||""; $("other").textContent=S.otherBrands||"";
+  var via=$("via");via.textContent="";
+  if(S.company){via.appendChild(document.createTextNode("Penawaran dan pengiriman melalui "));
+    if(S.companyUrl){var ca=el("a",S.company);ca.href=S.companyUrl;ca.target="_blank";ca.rel="noopener";ca.style.color="var(--orange)";via.appendChild(ca)}
+    else{via.appendChild(document.createTextNode(S.company))}
+    via.appendChild(document.createTextNode("."))}
+  via.hidden=!S.company;
+  if(S.companyUrl){var fa=$("f-site");fa.querySelector("a").href=S.companyUrl;fa.hidden=false}
+  var sel=$("q-brand");
+  (S.brands||[]).forEach(function(b){var li=rv(el("li"));li.appendChild(el("strong",b.name));li.appendChild(document.createTextNode(b.text));
+    $("brands").appendChild(li);var o=el("option",b.name);o.value=b.name;sel.appendChild(o)});
+  var oo=el("option","Merek lain");oo.value="Merek lain";sel.appendChild(oo);
+  $("quote").addEventListener("submit",function(e){e.preventDefault();
+    var l=["Halo Pak Rizal, saya mau tanya part.","Merek: "+sel.value];
+    if($("q-unit").value.trim())l.push("Tipe unit: "+$("q-unit").value.trim());
+    if($("q-part").value.trim())l.push("No. seri/part: "+$("q-part").value.trim());
+    window.open(wa(l.join("\n")),"_blank","noopener")});
 
-  $("quote").addEventListener("submit", function(e){
-    e.preventDefault();
-    var lines = ["Halo Pak Rizal, saya mau tanya part.","Merek: "+sel.value];
-    if($("q-unit").value.trim()) lines.push("Tipe unit: "+$("q-unit").value.trim());
-    if($("q-part").value.trim()) lines.push("No. seri/part: "+$("q-part").value.trim());
-    window.open(wa(lines.join("\n")), "_blank", "noopener");
-  });
+  var p=S.project||{};
+  $("p-cat").textContent=p.category||"";$("p-title").textContent=p.title||"";$("p-text").textContent=p.text||"";
+  (p.tags||[]).forEach(function(t){$("p-tags").appendChild(el("li",t))});
+  var d=$("p-demo");
+  if(p.demoUrl){d.href=p.demoUrl;d.target="_blank";d.rel="noopener"}else{d.textContent="Segera hadir";d.setAttribute("aria-disabled","true");d.removeAttribute("href")}
+  if(p.repoUrl){var r=$("p-repo");r.href=p.repoUrl;r.target="_blank";r.rel="noopener";r.hidden=false}
 
-  var p = S.project||{};
-  $("p-title").textContent = p.title||""; $("p-text").textContent = p.text||"";
-  (p.features||[]).forEach(function(f){$("p-feat").appendChild(el("li",f))});
-  var demo=$("p-demo");
-  if(p.demoUrl){demo.href=p.demoUrl; demo.target="_blank"; demo.rel="noopener"}
-  else{demo.textContent="Demo segera hadir"; demo.setAttribute("aria-disabled","true"); demo.removeAttribute("href")}
-  if(p.repoUrl){var r=$("p-repo"); r.href=p.repoUrl; r.target="_blank"; r.rel="noopener"; r.hidden=false}
+  (S.principles||[]).forEach(function(x,i){var c=rv(el("div",undefined,"pr"));
+    c.appendChild(el("span","0"+(i+1),"n"));c.appendChild(el("h3",x.title));c.appendChild(el("p",x.text));$("principles").appendChild(c)});
 
-  $("c-wa").href = wa(""); $("c-li").href = S.linkedin; $("c-gh").href = S.github;
-  [$("c-wa"),$("c-li"),$("c-gh")].forEach(function(a){a.target="_blank"; a.rel="noopener"});
-  $("foot").textContent = S.name+", Cilegon."+(S.company ? " "+S.company+"." : "");
+  $("c-title").textContent=S.contactTitle||"";$("c-text").textContent=S.contactText||"";
+  var links=[["WhatsApp",wa(""),1],["LinkedIn",S.linkedin],["GitHub",S.github],["Email",S.email?"mailto:"+S.email:""]];
+  links.forEach(function(k){if(!k[1])return;var a=el("a",k[0],"btn"+(k[2]?"":" ghost"));a.href=k[1];
+    if(k[0]!=="Email"){a.target="_blank";a.rel="noopener"}$("c-links").appendChild(a)});
+
+  var hdr=$("hdr");var onS=function(){hdr.classList.toggle("solid",window.scrollY>40)};onS();window.addEventListener("scroll",onS,{passive:true});
+  var m=$("menu"),nl=$("nav-list");
+  m.addEventListener("click",function(){var o=nl.classList.toggle("open");m.setAttribute("aria-expanded",o)});
+  nl.addEventListener("click",function(e){if(e.target.tagName==="A"){nl.classList.remove("open");m.setAttribute("aria-expanded","false")}});
+
+  var rvs=document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    rvs.forEach(function(e){io.observe(e)})}else{rvs.forEach(function(e){e.classList.add("in")})}
+  var secs=["atas","tentang","keahlian","part","proyek","kontak"].map($),links2=nl.querySelectorAll("a");
+  if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links2.forEach(function(a){a.removeAttribute("aria-current")});
+    var a=nl.querySelector('a[href="#'+e.target.id+'"]');if(a)a.setAttribute("aria-current","true")}})},{rootMargin:"-45% 0px -50% 0px"});secs.forEach(function(s){if(s)so.observe(s)})}
 })();
 </script>
 </body>

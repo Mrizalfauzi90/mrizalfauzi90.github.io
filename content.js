@@ -1,36 +1,45 @@
-/* ============================================================
-   ISI WEBSITE: edit file ini saja (lewat GitHub: buka file > ikon pensil).
-   Aturan: jangan hapus tanda kutip " " dan koma di ujung baris.
-   JANGAN tulis password atau token di file ini, file ini publik.
-   ============================================================ */
+/* ISI WEBSITE: edit file ini saja (GitHub: buka file, klik ikon pensil).
+   Jangan hapus tanda kutip " " dan koma di ujung baris.
+   JANGAN tulis password atau token di sini, file ini publik. */
 window.SITE = {
   name: "M. Rizal Fauzi",
-  role: "Sales spare parts alat berat dan forklift, yang membuat tools sendiri untuk kerja lapangan.",
-  photo: "foto.jpg",            // foto profil, ganti file ini untuk mengganti foto
-  photoAlt: "Foto profil M. Rizal Fauzi",
-  area: "Cilegon dan Serang, Banten",
-  field: "Sales, spare parts, customer service",
-
-  // Nama perusahaan: ISI SETELAH ADA IZIN ATASAN. Kosongkan ("") untuk menyembunyikan.
+  role: "Customer Service Officer",
   company: "PT. Berca Mandiri Perkasa",
+  companyUrl: "https://berca-mp.co.id/id/",   // situs perusahaan; kosongkan "" untuk menyembunyikan
+  location: "Cilegon, Indonesia",
+  photo: "foto.jpg",
+  photoAlt: "Foto profil M. Rizal Fauzi",
 
-  whatsapp: "6287889501070",          // format 62..., tanpa + dan tanpa 0 di depan
+  whatsapp: "6287889501070",
   linkedin: "https://www.linkedin.com/in/muhamad-rizal-fauzi-982391184/",
   github: "https://github.com/Mrizalfauzi90",
+  email: "",   // isi email bila mau ditampilkan, kosong = disembunyikan
 
+  // Banner merek. Kosongkan banner ("") untuk menyembunyikan seluruh bagian ini.
+  banner: "forklift-brands-banner.jpg",
+  bannerTitle: "Merek Material Handling",
+  bannerAlt: "Forklift Mitsubishi, Nichiyu, dan BYD berdampingan dengan logo masing-masing merek",
+  bannerNote: "Nama merek, logo, dan gambar produk adalah milik masing-masing pemilik merek dan ditampilkan sebagai informasi layanan.",
+
+  eyebrow: "Material Handling | Alat Berat | Tools Digital",
+  headline: "Menghubungkan Kebutuhan Industri dengan Solusi Praktis.",
+  intro: "Saya M. Rizal Fauzi, Customer Service Officer di PT. Berca Mandiri Perkasa, berfokus pada dukungan customer, koordinasi spare parts, layanan purna jual, dan solusi digital yang praktis.",
+
+  aboutTitle: "Solusi Praktis. Koordinasi Andal. Pengalaman Customer Lebih Baik.",
   about: [
-    "Saya Rizal, sales spare parts alat berat dan forklift di Cilegon dan Serang. Sehari-hari saya bekerja langsung dengan customer industri: mencari part yang tepat, membuat penawaran, bernegosiasi, dan berkoordinasi dengan tim servis sampai unit kembali jalan.",
-    "Dari pekerjaan itu saya sering ketemu urusan administrasi yang berulang, jadi saya belajar membuat tools web sendiri. Hasilnya Tracker VCS, pencatat visit dan quotation yang saya pakai di lapangan.",
-    "Saya terbuka berbagi cara membuat tools sederhana seperti ini untuk orang yang bekerja di lapangan, tanpa perlu latar belakang programmer."
+    "Saya bekerja di bidang customer service pada industri material handling dan alat berat. Peran saya mendukung kebutuhan customer, mengoordinasikan permintaan spare parts dan servis, menyiapkan penawaran, serta menindaklanjuti kebutuhan operasional.",
+    "Saya juga senang mengeksplorasi tools digital yang menyederhanakan pekerjaan berulang dan membuat kerja sehari-hari lebih efisien."
   ],
 
-  work: [
-    { title: "Sales dan spare parts", text: "Prospek customer, penawaran harga, negosiasi, dan koordinasi dengan tim servis." },
-    { title: "Customer service", text: "Menjembatani kebutuhan customer dengan tim internal, dari permintaan part sampai tindak lanjut servis." },
-    { title: "Membuat tools kerja", text: "Merancang dan membangun aplikasi web sendiri untuk menyelesaikan masalah di lapangan." }
+  expertise: [
+    { title: "Koordinasi Spare Parts", text: "Mendukung permintaan spare parts, identifikasi nomor part, penyiapan penawaran, pengecekan stok, dan koordinasi pengiriman." },
+    { title: "Layanan Purna Jual", text: "Mengoordinasikan permintaan servis, dukungan unit, tindak lanjut customer, dan komunikasi dengan tim internal." },
+    { title: "Hubungan Customer", text: "Menjaga komunikasi customer yang profesional, tindak lanjut penawaran, dan solusi praktis untuk kebutuhan customer." },
+    { title: "Produktivitas Digital", text: "Mengeksplorasi spreadsheet, aplikasi web, dan perbaikan alur kerja supaya pekerjaan sehari-hari lebih efisien." }
   ],
 
-  // Sesuaikan deskripsi dengan yang benar-benar kamu layani. Tanpa logo, tanpa harga, tanpa klaim "resmi/original".
+  partsIntro: "Kirim merek, tipe unit, dan nomor seri atau nomor part. Saya cek ketersediaan lalu kirim penawaran. Harga dan stok dikonfirmasi lewat penawaran resmi.",
+  // Sesuaikan dengan yang benar-benar dilayani. Tanpa logo, tanpa harga, tanpa klaim "resmi/original".
   brands: [
     { name: "Mitsubishi", text: "Part forklift Mitsubishi (Logisnext) untuk kebutuhan perawatan dan perbaikan." },
     { name: "Nichiyu",    text: "Part forklift elektrik Nichiyu dan kebutuhan servis rutinnya." },
@@ -41,14 +50,20 @@ window.SITE = {
   otherBrands: "Merek lain tidak ada di daftar? Tanyakan, kemungkinan bisa dibantu.",
 
   project: {
+    category: "Aplikasi Web / Produktivitas",
     title: "Tracker VCS",
-    text: "Pencatat visit dan quotation berbasis web yang bisa dipakai dari HP, dibuat untuk menggantikan catatan lapangan yang berserakan. Demo di bawah memakai data contoh.",
-    features: [
-      "Catat visit customer dan tindak lanjutnya",
-      "Pantau quotation dan status penjualan",
-      "Sinkron antar perangkat lewat akun GitHub sendiri"
-    ],
-    demoUrl: "demo.html",   // demo ada di file demo.html (data contoh). Kosong = tombol tampil "Segera hadir"
-    repoUrl: ""    // isi link repo publik bila sudah siap dibagikan
-  }
+    text: "Pencatat visit dan quotation berbasis web yang bisa dipakai dari HP, dibuat untuk menggantikan catatan lapangan yang berserakan. Demo memakai data contoh.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "demo.html",   // kosong = tombol tampil "Segera hadir"
+    repoUrl: ""
+  },
+
+  principles: [
+    { title: "Fokus pada Customer", text: "Pahami kebutuhan sebelum mengusulkan solusi." },
+    { title: "Berbasis Data", text: "Gunakan informasi yang akurat untuk mendukung keputusan." },
+    { title: "Eksekusi Praktis", text: "Ubah kebutuhan menjadi langkah berikutnya yang jelas." }
+  ],
+
+  contactTitle: "Mari Terhubung.",
+  contactText: "Untuk diskusi profesional, dukungan kebutuhan industri, atau kolaborasi proyek digital, silakan hubungi saya."
 };
